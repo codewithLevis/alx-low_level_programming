@@ -1,4 +1,4 @@
-#include <stdio.h>3-print_alphabets.c:16: ERROR: trailing whitespace
+#include <stdio.h>
 
 /**
  * main - Use for loop
