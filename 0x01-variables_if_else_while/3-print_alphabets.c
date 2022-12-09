@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h>3-print_alphabets.c:16: ERROR: trailing whitespace
 
 /**
  * main - Use for loop
@@ -13,7 +13,7 @@ int main(void)
 {
 	putchar(alphabetic);
 }
-	for (alphabetic = 'A'; alphabetic <= 'Z'; alphabetic++) 
+	for (alphabetic = 'A'; alphabetic <= 'Z'; alphabetic++)
 {
 	putchar(alphabetic);
 }
