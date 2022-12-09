@@ -1,12 +1,15 @@
 #include <stdio.h>
-/* main - print alphabetics
+/**
+*main - print alphabetics
 *
-*Description: outputs the alphabets using putchar func
+*Description:outputs_the alphabets using putchar_func
+*
 * Return: value 0 
 */
 int main(void)
 {
-	char  alphabetic = 'a';
+	char alphabetic = 'a';
+	
 	for (alphabetic = 'a'; alphabetic <= 'z'; alphabetic++)
 		
 		putchar(alphabetic);
