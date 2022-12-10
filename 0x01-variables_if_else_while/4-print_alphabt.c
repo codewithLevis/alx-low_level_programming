@@ -10,8 +10,7 @@ int main(void)
 {
 	char  alphabetic;
 
-	for (alphabetic = 'a'; alphabetic <= 'z'; alphabetic++)
-		
+for (alphabetic = 'a'; alphabetic <= 'z'; alphabetic++)
 {
 if (alphabetic == 'e' || alphabetic == 'q')
 {
