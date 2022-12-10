@@ -13,13 +13,11 @@ for (i = '1'; i <= '9'; i++)
     {
     putchar(number);
     putchar(i);
-    if (number <= '8' && i<= '8' )
+    if (number <= '8' && i<= '9' )
     {
     putchar(',');
     putchar(' ');
     }
-    else
-    putchar(' ');
     }
 
 
