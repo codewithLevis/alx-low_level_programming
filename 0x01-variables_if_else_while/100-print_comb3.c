@@ -7,17 +7,18 @@
 int main(void)
 {
 int number,i;
-for (number = '0'; number <= '9'; number++)
+for (number = 0; number <= 8; number++)
 {
-for (i = '1'; i <= '9'; i++)
+for (i = number+1 ; i <= 9; i++)
     {
-    putchar(number);
-    putchar(i);
-    if (number <= '8' && i<= '9' )
-    {
+    putchar((number % 10) + '0');
+    putchar((i % 10) + '0');
+    if (number ==8 && i ==9 )
+        continue;
+
     putchar(',');
     putchar(' ');
-    }
+
     }
 
 
