@@ -13,9 +13,6 @@ for (i = number+1; i <= '9'; i++)
 {
 for (j = number+2; j <= '9'; j++)
 {
-putchar((number % 10) + '0');
-putchar((i % 10) + '0');
-putchar((k % 10) + '0');
 if (number == 7 && i == 8 && j == 9)
 continue;
 
