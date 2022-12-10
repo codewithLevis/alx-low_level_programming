@@ -13,7 +13,9 @@ int main(void)
 	for (alphabetic = 'a'; alphabetic <= 'z'; alphabetic++)
 {
     if (alphabetic == 'e' || alphabetic == 'q')
-        continue;
+    {
+	    continue;
+    }
     putchar(alphabetic);
 }
 	putchar('\n');
