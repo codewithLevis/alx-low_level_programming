@@ -12,7 +12,7 @@ char alphabetic;
 
 for (alphabetic = 'z'; alphabetic >= 'a'; alphabetic--)
 {
- putchar(alphabetic);
+putchar(alphabetic);
 }
 	putchar('\n');
 	return (0);
