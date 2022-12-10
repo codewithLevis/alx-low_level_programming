@@ -24,5 +24,5 @@ for (i = '1'; i <= '9'; i++)
 
 }
 putchar('\n');
-
+return (0);
 }
