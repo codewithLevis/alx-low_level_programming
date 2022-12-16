@@ -16,34 +16,34 @@ if (n <= 15 && n >= 0)
 num1 = 0;
 while (num1 <= n)
 {
-putchar('0');
+_putchar('0');
 num2 = 1;
 while (num2 <= n)
 {
-putchar(',');
-putchar(' ');
-product = num1 *num2;
+_putchar(',');
+_putchar(' ');
+_product = num1 *num2;
 if (product < 100)
 {
-putchar(' ');
+_putchar(' ');
 }
 if (product <= 9)
 {
-putchar(' ');
+_putchar(' ');
 }
 if (product >= 100)
 {
-putchar((product / 100) + '0');
-putchar((product / 10) % 10 + '0');
+_putchar((product / 100) + '0');
+_putchar((product / 10) % 10 + '0');
 }
 else if (product <= 99 && product >= 10)
 {
-putchar((product / 10) + '0');
+_putchar((product / 10) + '0');
 }
-putchar((product % 10) + '0');
+_putchar((product % 10) + '0');
 num2++;
 }
-putchar('\n');
+_putchar('\n');
 num1++;
 }
 }
