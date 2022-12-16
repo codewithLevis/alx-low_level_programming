@@ -9,14 +9,14 @@ int main(void)
 int i;
 unsigned long int prev = 1, curr = 2, next;
 
-printf("%lu ,", prev);
-printf("%lu ,", curr);
+printf("%lu, ", prev);
+printf("%lu, ", curr);
 i = 2;
 while (i < 50)
 {
 next = prev + curr;
 if (i < 49)
-printf("%lu ,", next);
+printf("%lu, ", next);
 if (i == 49)
 printf("%lu", next);
 prev = curr;
