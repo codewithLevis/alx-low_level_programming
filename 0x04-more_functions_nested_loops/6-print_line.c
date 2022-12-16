@@ -9,6 +9,6 @@ void print_line(int n)
 {
 int i = 0;
 for (; i < n; i++)
-putchar('_');
-putchar('\n');
+_putchar('_');
+_putchar('\n');
 }
