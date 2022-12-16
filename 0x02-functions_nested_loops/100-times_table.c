@@ -22,7 +22,7 @@ while (num2 <= n)
 {
 _putchar(',');
 _putchar(' ');
-_product = num1 *num2;
+product = num1 *num2;
 if (product < 100)
 {
 _putchar(' ');
