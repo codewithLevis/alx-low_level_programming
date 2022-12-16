@@ -4,7 +4,7 @@
 *Return: 0
 */
 
-int main(void) 
+int main(void)
 {
 int i;
 unsigned long int prev = 1, curr = 2, next;
@@ -12,7 +12,7 @@ unsigned long int prev = 1, curr = 2, next;
 printf("%lu ,", prev);
 printf("%lu ,", curr);
 i = 2;
-while (i < 49)
+while (i < 50)
 {
 next = prev + curr;
 if (i < 49)
