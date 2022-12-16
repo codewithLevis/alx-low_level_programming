@@ -16,13 +16,13 @@ for (; j < n; j++)
 {
 if (i == j)
 {
-putchar('\\');
+_putchar('\\');
 }
 else
 {
-putchar(' ');
+_putchar(' ');
 }
 }
-putchar('\n');
+_putchar('\n');
 }
 }
