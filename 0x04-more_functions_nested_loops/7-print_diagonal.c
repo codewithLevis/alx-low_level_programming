@@ -18,9 +18,13 @@ if (i == j)
 {
 _putchar('\\');
 }
-else
+else if (i > j)
 {
 _putchar(' ');
+}
+else
+{
+break;
 }
 }
 _putchar('\n');
