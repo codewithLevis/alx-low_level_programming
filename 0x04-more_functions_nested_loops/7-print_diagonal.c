@@ -20,7 +20,7 @@ putchar('\\');
 }
 else
 {
-putchar(' ' );
+putchar(' ');
 }
 }
 putchar('\n');
