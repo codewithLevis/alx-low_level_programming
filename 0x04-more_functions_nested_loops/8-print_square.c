@@ -1,8 +1,8 @@
 #include "main.h"
 /**
 * print_square - prints a square with # symbol
-* @size - parameter for input
-* Return: 0
+* @size: parameter for input
+* Return: no value
 */
 void print_square(int size)
 {
@@ -24,5 +24,4 @@ else if (size <= 0)
 {
 _putchar('\n');
 }
- return (0);
 }
