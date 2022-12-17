@@ -7,9 +7,9 @@
 int main(void)
 {
 	int mult = 0;
-	int tot= 0;
+	int tot = 0;
 
-	for (;mult <= 1024; mult++)
+	for (; mult <= 1024; mult++)
 	{
 		if (mult > 0)
 		{
