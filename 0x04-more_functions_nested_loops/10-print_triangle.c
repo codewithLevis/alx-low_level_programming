@@ -13,11 +13,11 @@ if (size > 0)
 base = 1;
 while (base <= size)
 {
-height= 1;
+height = 1;
 while (height <= size - base)
 {
 _putchar(' ');
- height++;
+height++;
 }
 height = 1;
 while (height <= base)
