@@ -1,25 +1,20 @@
-#include <stdio.h>
-#include <math.h>
-
-int main() {
-long long num = 612852475143;
-long long largest_factor = 1;
-
-long long max_factor = (long long) sqrt(num);
-for (long long i = 2; i <= max_factor; i++)
+#include "main.h"
+/**
+*print_number - function for printing number
+*@n: parameter for number
+*Return: nonvalue
+*/
+void print_number(int n)
 {
-while (num % i == 0) {
-largest_factor = i;
-num /= i;
-}
-}
-
-
-if (num > 1)
+unsigned int number = n;
+if (n < 0)
 {
-largest_factor = num;
+_putchar('-');
+number = -number;
 }
-
-printf("%lld\n", largest_factor);
-return 0;
+if (number > 9)
+{
+print_number(number / 10);
+}
+_putchar(number % 10 + '0');
 }
