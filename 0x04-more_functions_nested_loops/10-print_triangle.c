@@ -1,35 +1,32 @@
 #include "stdio.h"
 /**
-* print_diagonal - prints diagonal
-*@n: holds the argument
-* Return: line
+* print_triangle- tiangle function
+*@size: holds the argument
+* Return: non value
 */
 
-void print_diagonal(int n)
+void print_triangle(int size)
 {
-int i, j;
-i = 0;
-if (n > 0)
+int base, height;
+if (size > 0)
 {
-for (; i < n; i++)
+base = 1;
+while (base <= size)
 {
-j = 0;
-for (; j < n; j++)
-{
-if (i == j)
+height= 1;
+while (height <= size - base)
 {
 _putchar(' ');
+ height++;
 }
-else if (i > j)
-{
-_putchar(' ');
-}
-else
+height = 1;
+while (height <= base)
 {
 _putchar('#');
-}
+height++;
 }
 _putchar('\n');
+base++;
 }
 }
 else
