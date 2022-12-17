@@ -1,25 +1,39 @@
 #include <stdio.h>
+/**
+* print_to_98 - prints numbers ending at 98
+*@n: argument
+*Return: non-value
+*/
 
 void print_to_98(int n)
 {
-  int i;
-  
-  for (i = n; i <= 98; i++)
-  {
-    printf("%d", i);
-  }
-  for (i = n; i >= 98; i--)
-  {
-    printf("%d", i);
-  }
-  putchar('\n');
-}
-int main(void)
+if (n <= 98)
 {
-    print_to_98(0);
-    print_to_98(98);
-    print_to_98(111);
-    print_to_98(81);
-    print_to_98(-10);
-    return (0);
+for (; n<=98; n++)
+{
+printf("%d", n);
+if (n < 98)
+{
+
+putchar(',');
+putchar(' ');
+}
+else if (n == 98)
+break;
+}
+putchar('\n');
+}
+else if (n >= 98)
+{
+for (; n >= 98; n--)
+{
+printf("%d", n);
+if (n > 98)
+
+putchar(',');
+putchar(' ');
+}
+putchar('\n');
+}
+
 }
