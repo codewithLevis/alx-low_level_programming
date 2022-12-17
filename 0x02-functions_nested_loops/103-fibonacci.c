@@ -4,17 +4,18 @@
 *Return: 0
 */
 
-int main(void) {
+int main(void)
+{
 int i;
-long unsigned int prev = 1, curr = 2, next,sum;
+unsigned long int prev = 1, curr = 1, next, sum;
 sum = 0;
-i = 2;
+i = 1;
 while (i < 50)
 {
 next = prev + curr;
 if (next < 4000000)
 {
-if (next% 2 == 0)
+if (next % 2 == 0)
 sum = next + sum;
 }
 
@@ -24,5 +25,5 @@ i++;
 }
 printf("%lu", sum);
 putchar('\n');
-return 0;
+return (0);
 }
