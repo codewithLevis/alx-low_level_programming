@@ -7,7 +7,7 @@
 */
 int main(void)
 {
-char output[9] = "_putchar";
+char output[8] = "_putchar";
 int i = 0;
 while (i < 9)
 {
