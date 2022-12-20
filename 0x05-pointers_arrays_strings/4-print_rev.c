@@ -1,32 +1,42 @@
 #include "main.h"
 
-void _puts(char *str)
-{
-	int j;
+/**
+* _strlen -returns the length of a string
+*
+* @s: pointer parameter
+*
+* Return: length of string
+*
+*/
 
-	while (str[j] != '\0')
-	{
-		putchar(str[j]);
-		++j;
-	}
-	putchar('\n');
+int _strlen(char *s)
+{
+int strlen;
+
+strlen = 0;
+while (*s != '\0')
+{
+++strlen;
+s++;
+}
+
+return (strlen);
 }
 
 /**
- * print_rev - Prints a string in reverse
- *
- * @s: string parameter
- *Return: no value
- */
+* print_rev - prints a string, in reverse
+* @s:parameter
+*Return: non-value
+*/
 void print_rev(char *s)
 {
-int rev = strlen(s);
-int j = rev - 1;
+int ext = _strlen(s);
+int call = ext - 1;
 
-while (j >= 0)
+while (call + 1)
 {
-_putchar(s[j]);
-j--;
+_putchar(s[call]);
+--call;
 }
 _putchar('\n');
 }
