@@ -24,7 +24,7 @@ return (strlen);
 }
 
 /**
-* _strcpy -  copies the string pointed to by src, including the terminating null byte '\0'
+* _strcpy -  copies the string pointed to by src
 *
 * @src: parameter for passing string value
 * @dest: parameter for passing the string
