@@ -32,7 +32,7 @@ void rev_string(char *s)
 {
 int y = 0;
 char x;
-int ext = strlen(s);
+int ext = _strlen(s);
 
 do {
 x = s[y];
