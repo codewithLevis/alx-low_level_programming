@@ -1,43 +1,45 @@
 #include "main.h"
 
 /**
- * _strlen -returns the length of a string
- *
- * @s: pointer parameter
- *
- * Return: length of string
- *
- */
+* _strlen -returns the length of a string
+*
+* @s: pointer parameter
+*
+* Return: length of string
+*
+*/
 
 int _strlen(char *s)
 {
-	int strlen;
+int strlen;
 
-	strlen = 0;
-	while (*s != '\0')
-    {
-        ++strlen;
-        s++;
-    }
+strlen = 0;
+while (*s != '\0')
+{
+++strlen;
+s++;
+}
 
-	return (strlen);
+return (strlen);
 }
 /**
- * rev_string -  reverses a string
- *
- * @s: parameter
- *Return: non-value
- */
+* rev_string -  reverses a string
+*
+* @s: parameter
+*Return: non-value
+*/
 void rev_string(char *s)
 {
-char y;
-int x;
-int ext = _strlen(s);
+int y = 0;
+char x;
+int ext = strlen(s);
 
-for (; x < ext / 2; x++)
-{
-y = s[x];
-s[x] = s[ext - x - 1];
-s[ext - x - 1] = y;
+do {
+x = s[y];
+s[y] = s[ext - y - 1];
+s[ext - y - 1] = x;
+
+} while (x < ext / 2);
+
 }
-}
+
