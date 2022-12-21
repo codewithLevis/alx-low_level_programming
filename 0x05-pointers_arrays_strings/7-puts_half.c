@@ -1,34 +1,34 @@
 #include "main.h"
 
 /**
- * _strlen -returns the length of a string
- *
- * @s: pointer parameter
- *
- * Return: length of string
- *
- */
+* _strlen -returns the length of a string
+*
+* @s: pointer parameter
+*
+* Return: length of string
+*
+*/
 
 int _strlen(char *s)
 {
-	int strlen;
+int strlen;
 
-	strlen = 0;
-	while (*s != '\0')
-    {
-        ++strlen;
-        s++;
-    }
+strlen = 0;
+while (*s != '\0')
+{
+++strlen;
+s++;
+}
 
-	return (strlen);
+return (strlen);
 }
 /**
- * puts_half - prints half of a string
- *
- * @str: parameter
- *
- * Return: non-value
- */
+* puts_half - prints half of a string
+*
+* @str: parameter
+*
+* Return: non-value
+*/
 
 void puts_half(char *str)
 {
