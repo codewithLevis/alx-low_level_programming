@@ -18,8 +18,8 @@ do {
 ++m;
 dest[n] = src[m - 1];
 n++;
+} while (src[m] != '\0');
 
-}while (src[m] != '\0');
 dest[n] = '\0';
 
 return (dest);
