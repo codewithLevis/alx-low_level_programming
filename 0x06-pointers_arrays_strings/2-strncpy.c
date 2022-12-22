@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* _strncat  - concatinates strings
+* _strncpy  - concatinates strings
 *
 * @dest: first pointer argument
 * @src: second pointer argument
