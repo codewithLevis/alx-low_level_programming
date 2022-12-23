@@ -9,7 +9,7 @@
 *
 * Return: joined strings
 */
-char *_strncat(char *dest, char *src, int n)
+har *_strncat(char *dest, char *src, int n)
 {
 int m = 0;
 int l = 0;
@@ -17,13 +17,9 @@ int l = 0;
 for (; dest[m] != '\0';)
 m++;
 
-do {
+for (; l < n && src[l] != '\0' ; l++)
 dest[m + l] = src[l];
 
-l++;
-} while (l < n && src[l] != '\0');
-
-dest[m + l] = '\0';
-
+dest[l + m] = '\0';
 return (dest);
 }
