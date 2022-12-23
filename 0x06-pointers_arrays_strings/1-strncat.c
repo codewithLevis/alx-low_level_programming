@@ -9,7 +9,7 @@
 *
 * Return: joined strings
 */
-har *_strncat(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
 int m = 0;
 int l = 0;
