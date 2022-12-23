@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 /**
 * leet - encodes a string into 1337
 *@str: parameter
@@ -12,7 +12,7 @@ int v = 0;
 
 
 do {
-if ((str[v] >= 97 && str[v] <= 122) || (str[v] >= 65) && str [v] <= 90)
+if ((str[v] >= 97 && str[v] <= 122) || (str[v] >= 65 && str [v] <= 90))
 {
 if(str[v] == 97 || str[v] == 65)
 str[v] = '4';
@@ -25,8 +25,6 @@ str[v] = '7';
 if(str[v] == 108 || str[v] == 76)
 str[v] = '1';
 }
-
-
 } while (str[v++]);
 
 return (str);
