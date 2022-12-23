@@ -7,7 +7,7 @@
 
 char *leet(char *unit)
 {
-char value[8] = {'O', 'L', '!', 'E', 'A', '!', '!', 'T'};
+char value[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
 
 int range1, range2;
 range1 = 0;
