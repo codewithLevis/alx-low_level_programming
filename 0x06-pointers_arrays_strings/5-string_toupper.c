@@ -14,5 +14,5 @@ if (str[v] >= 97 && str[v] <= 122)
 str[v] -= 32;
 } while (str[v++]);
 
-return (0);
+return (str);
 }
