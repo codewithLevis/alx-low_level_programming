@@ -14,7 +14,7 @@ int64_t a = 2;
 
 while (a <= sqrt(num))
 {
-for (;num % a == 0;)
+for (; num % a == 0;)
 {
 largest_factor = a;
 num /= a;
