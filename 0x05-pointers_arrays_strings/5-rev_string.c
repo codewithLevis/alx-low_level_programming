@@ -38,7 +38,7 @@ do {
 x = s[y];
 s[y] = s[ext - y - 1];
 s[ext - y - 1] = x;
-
+y++;
 } while (y < ext / 2);
 
 }
