@@ -16,10 +16,10 @@ number = 0;
 while (number < 15)
 {
 if (number >= 10)
-putchar((number / 10) + '0');
-putchar((number % 10) + '0');
+_putchar((number / 10) + '0');
+_putchar((number % 10) + '0');
 number++;
 }
-putchar('\n');
+_putchar(10);
 }
 }
