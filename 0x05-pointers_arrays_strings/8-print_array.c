@@ -15,7 +15,7 @@ int print = 0;
 do {
 printf("%d", a[print]);
 if (print < n - 1)
-_putchar(',');
+printf(", ");
 print++;
 } while (print < n);
 printf("\n");
