@@ -39,7 +39,7 @@ x = s[y];
 s[y] = s[ext - y - 1];
 s[ext - y - 1] = x;
 
-} while (x < ext / 2);
+} while (y < ext / 2);
 
 }
 
