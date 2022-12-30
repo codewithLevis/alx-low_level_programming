@@ -13,7 +13,7 @@ int x =0, y = 0, z = 0, ext = 0, result = 0;
 int sign;
 while (s[ext] != '0')
 ext++;
-for (; y == 0; x++)
+for (; x < ext && y == 0; x++)
 {
 if (s[x] == '-')
 z++;
