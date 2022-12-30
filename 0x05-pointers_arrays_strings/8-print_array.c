@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
 * print_array - prints array of intergers
@@ -10,15 +11,12 @@
 */
 void print_array(int *a, int n)
 {
-int x;
-
+int print = 0;
 do {
-if (x != n - 1)
-printf("%d, ", a[x]);
-else
-printf("%d", a[x]);
-x++;
-}while (x < n);
-
+printf("%d", a[print]);
+if (print < n - 1)
+_putchar(',');
+print++;
+} while (print < n);
 printf("\n");
 }
