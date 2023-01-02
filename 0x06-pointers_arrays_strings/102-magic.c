@@ -1,8 +1,4 @@
 #include <stdio.h>
-/**
-*main - change value of an array
-*Return: 0
-*/
 
 int main(void)
 {
