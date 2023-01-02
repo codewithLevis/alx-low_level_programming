@@ -2,26 +2,36 @@
 /**
 * rot13 - function that encodes a string using rot13.
 *
-*@unit: parameter
+*@value: parameter
 *
-*Return: unit
+*Return: value
 */
 
-char *rot13(char *unit)
+char *rot13(char *value)
 {
-int letter;
+int i = 0, swapp;
+char  first_rot13[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+'m', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
+'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y',
+'Z'};
+char second_rot13[] = {'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
+'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+'m', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y',
+'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+'M'};
 
-do {
-for (; (unit[letter] >= 'a' && unit[letter] <= 'z') 
-|| (unit[letter] >= 'A' && unit[letter] <= 'Z'); letter++)
+while (value[i] != '\0')
 {
-if ((unit[letter] >= 'A' && unit[letter] <= 'M')
-|| (unit[letter] >= 'a' && unit[letter] <= 'm'))
-unit[letter] += 13;
-else
-unit[letter] -= 13;
+for (swapp = 0; swapp <= 52; swapp++)
+{
+if (first_rot13[swapp] == value[i])
+{
+value[i] = second_rot13[swapp];
+break;
 }
-letter++;
-} while (unit[letter] != '\0');
-return (unit);
+}
+i++;
+}
+return (value);
 }
