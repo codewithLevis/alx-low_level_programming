@@ -7,7 +7,7 @@
 char *cap_string(char *value)
 {
 int i = 0;
-for(; value[i] != '\0'; i++)
+for (; value[i] != '\0'; i++)
 {
 
 if (value[i] == ' ' || value[i] == '\t' || value[i] == '\n'
@@ -21,5 +21,5 @@ value[i + 1] -= 32;
 }
 
 }
-return(value);
+return (value);
 }
