@@ -4,7 +4,7 @@
 *
 *@dest: pointer for location of copied memory
 *@src: pointer for memory to be copied
-@n: number of memory to be copied
+*@n: number of memory to be copied
 *
 *Return: dest(copied memory)
 */
