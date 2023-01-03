@@ -3,7 +3,7 @@
 *_strstr - finds occurrence of the substring needle in the string haystack
 *
 *@haystack: first string pointer
-*@needle" second string pointer
+*@needle: second string pointer
 *
 *Return: a pointer to the beginning of the located substring or NULL
 */
