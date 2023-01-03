@@ -3,7 +3,7 @@
 *_strchr -  locates a character in a string
 *
 *@s:pointer to string
-*@n: parameter to chracter to be passed
+*@c: parameter to chracter to be passed
 *Return: a pointer to the first occurrence of the character c in the string s
 */
 char *_strchr(char *s, char c)
