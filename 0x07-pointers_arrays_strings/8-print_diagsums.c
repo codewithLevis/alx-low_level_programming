@@ -14,7 +14,7 @@ int x = 0, fir_sum = 0, sec_sum = 0;
 
 do {
 fir_sum += a[x * size + x];
-sec_sum += a[ x * size + (size - x - 1)];
+sec_sum += a[x * size + (size - x - 1)];
 
 x++;
 } while (x < size);
