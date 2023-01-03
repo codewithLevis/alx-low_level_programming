@@ -13,7 +13,7 @@ x = 0;
 
 do {
 y = 0;
-do{
+do {
 putchar(a[x][y]);
 y++;
 } while (y < 8);
