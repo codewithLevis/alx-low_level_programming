@@ -31,7 +31,7 @@ return (real_recursion_palindrome(m - 2, str + 1));
 }
 
 /**
-*_strlen_recursion - checks for palindrome
+*is_palindrome - checks for palindrome
 *@s: string pointer
 *Return: function's real_recursion_palindrome value
 */
