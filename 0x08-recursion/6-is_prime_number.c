@@ -25,10 +25,10 @@ return (calculate_prime(n, 2));
 }
 
 /**
-*is_prime_number - checks for divisibility of 2
+*calculate_prime - checks for divisibility of 2
 *
 *@num1: parameter for passing number to be checked
-*num2: iterator
+*@num2: iterator
 *
 *Return: 1 or 0
 */
