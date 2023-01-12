@@ -29,19 +29,19 @@ int main(int argc, char *argv[])
 					printf("Error\n");
 					return(1);
 				}
+				sum += atoi(argv[m]);
 				n++;
 			} while (argv[m][n] != '\0');
-			
-			sum += atoi(argv[m]);
 			m++;
 		} while (m < argc);
+
+		printf("%d\n", sum);
 	}
 	
 	else
 	{
 		printf("0\n");
 	}
-	
-	printf("%d\n", sum);
+
 	return (0);
 }
