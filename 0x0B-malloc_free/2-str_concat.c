@@ -28,7 +28,7 @@ char *str_concat(char *s1, char *s2)
 	
 	joint_len = n + m;
 	str = malloc(sizeof(char) * joint_len);
-	]if (str == NULL)
+	if (str == NULL)
 		return (NULL);
 	
 	for (joint_len = 0; s1[joint_len]; joint_len++)
