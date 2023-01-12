@@ -13,7 +13,7 @@ char *str_concat(char *s1, char *s2)
 	int m, n, o, p;
 	char *str;
 	
-	m = = n =o = p = 0;
+	m = n =o = p = 0;
 	
 	if (s1 == NULL)
 		s1 = "";
@@ -26,7 +26,7 @@ char *str_concat(char *s1, char *s2)
 		m++;
 	}
 	
-	while (s[o] != '\0')
+	while (str[o] != '\0')
 	{
 		++p;
 		o++;
