@@ -40,6 +40,6 @@ int **alloc_grid(int width, int height)
 
 		m++;
 	} while (m < height);
-	free(str);
+
 	return (str);
 }
