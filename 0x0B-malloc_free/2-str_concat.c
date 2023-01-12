@@ -45,6 +45,6 @@ char *str_concat(char *s1, char *s2)
 		m++;
 		o++;
 	} while (o < p);
-	//str[o + p] = '\0';
+	str[m] = '\0';
 	return (str);
 }
