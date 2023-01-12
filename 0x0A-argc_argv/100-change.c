@@ -15,20 +15,20 @@ int main(int argc, char *argv[])
 {
 	int money;
 	int coin_count = 0;
-	
+
 	if (argc < 2 || argc > 2)
 	{
 		printf("Error\n");
 		return (0);
 	}
-	
+
 	if (atoi(argv[1]) < 0)
 	{
 		printf("%d\n", 0);
 		return (0);
 	}
 	money = atoi(argv[1]);
-	
+
 	do {
 		if (money >= 25)
 			money -= 25;
