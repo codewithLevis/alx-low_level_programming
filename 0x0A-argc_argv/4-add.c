@@ -14,16 +14,16 @@ int main(int argc, char *argv[])
 	int m = 1;
 	int n;
 	int sum = 0;
-	
+
 	if (argc > 1)
 	{
 		do {
 			n = 0;
 			do {
-				if(!isdigit(argv[m][n]))
+				if (!isdigit(argv[m][n]))
 				{
 					printf("Error\n");
-					return(1);
+					return (1);
 				}
 
 				n++;
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 
 		printf("%d\n", sum);
 	}
-	
+
 	else
 	{
 		printf("0\n");
