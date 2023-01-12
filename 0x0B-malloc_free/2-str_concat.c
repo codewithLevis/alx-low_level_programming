@@ -13,7 +13,7 @@ char *str_concat(char *s1, char *s2)
 	int n = 0;
 	int m = 0;
 	int joint_len;
-	int concat_index;
+	int i;
 	char *str;
 	
 	if (s1 == NULL)
@@ -28,12 +28,14 @@ char *str_concat(char *s1, char *s2)
 	
 	joint_len = n + m;
 	str = malloc(sizeof(char) * joint_len);
+	]if (str == NULL)
+		return (NULL);
 	
 	for (joint_len = 0; s1[joint_len]; joint_len++)
-		str[concat_index++] = s1[joint_len];
+		str[i++] = s1[joint_len];
 
 	for (joint_len = 0; s2[joint_len]; joint_len++)
-		str[concat_index++] = s2[joint_len];
+		str[i++] = s2[joint_len];
 
 	return (str);
 }
