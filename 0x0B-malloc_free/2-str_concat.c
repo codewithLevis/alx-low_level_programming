@@ -31,11 +31,11 @@ char *str_concat(char *s1, char *s2)
 	if (str == NULL)
 		return (NULL);
 	
-	for (joint_len = 0; s1[joint_len]; joint_len++)
-		str[i++] = s1[joint_len];
+	for (m = 0; s1[m]; m++)
+		str[i++] = s1[m];
 
-	for (joint_len = 0; s2[joint_len]; joint_len++)
-		str[i++] = s2[joint_len];
+	for (n = 0; s2[n]; n++)
+		str[i++] = s2[n];
 
 	return (str);
 }
