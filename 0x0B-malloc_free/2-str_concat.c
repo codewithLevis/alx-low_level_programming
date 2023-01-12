@@ -37,13 +37,14 @@ char *str_concat(char *s1, char *s2)
 	if (str == NULL)
 		return (NULL);
 	do {
-		str[m + n] = s1[m];
+		str[m] = s1[m];
 		m++;
 	} while (m < n);
 	do {
-		str[o + p] = s2[o];
+		str[m] = s2[o];
+		m++;
 		o++;
 	} while (o < p);
-	str[o + p] = '\0';
+	//str[o + p] = '\0';
 	return (str);
 }
