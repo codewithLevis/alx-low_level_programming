@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	int count = 1;
 	int mult = 1;
 
-	if (argc != 3)
+	if (argc > 2)
 	{
 	do {
 		mult *= atoi(argv[count]);
