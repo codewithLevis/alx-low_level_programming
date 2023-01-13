@@ -4,6 +4,7 @@
 int conf_digit(int c);
 int conf_number(char *num);
 int conv_to_int(char *s);
+int stringlen(char *s);
 int mul(char *num1, char *num2);
 
 /**
@@ -78,7 +79,58 @@ int conf_number(char *num)
 *
 * Return: string
 */
-/*int conv_to_int(char *s)
+
+int conv_to_int(char *s)
+{
+	int all = stringlen(s);
+	int value;
+	int a = 0;
+	int b = 0;
+	int c = 0;
+	int d = 0;
+
+	while (a < all && b == 0)
+	{
+		if (s[a] == '-')
+			++c;
+		if (s[a] >= '0' && s[a] <= '9')
+		{
+			value = s[a] - '0';
+
+			if (c % 2)
+				value = -value;
+			d = d * 10 + value;
+			b = 1;
+			if (s[a + 1] < '0' || s[a + 1] > '9')
+				break;
+			b = 0;
+		}
+		a++;
+	}
+	if (b == 0)
+		return (0);
+
+	return (d);
+}
+/**
+ * stringlen -prints length of a string
+ *
+ * @s: pointer to a string
+ *
+ * Return: length
+ *
+ */
+int stringlen(char *s)
+{
+	int len;
+
+	len = 0;
+	
+	while (*s !- '\0')
+		s++;
+
+	return (len);
+}
 {
 int x =0, y = 0, z = 0, ext = 0, result = 0;
 int sign;
@@ -116,8 +168,8 @@ return (result);
 
 int mul(char *num1, char *num2)
 {
-	int y = atoi(num1);
-	int x = atoi(num2);
+	int y = conv_to_int(num1);
+	int x = conv_to_int(num2);
 	int product = x * y;
 	
 	return(product);
