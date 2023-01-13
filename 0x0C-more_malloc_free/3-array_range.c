@@ -3,7 +3,8 @@
 
 /**
 *array_range - creates an array of integers
-*The array created should contain all the values from min (included) to max (included)
+*The array created should contain all the values
+*from min (included) to max (included)
 *ordered from min to max
 *@min: minimum range
 *@max: maximum range
@@ -14,18 +15,18 @@ int *array_range(int min, int max)
 {
 	int *arrays;
 	int range, m;
-	
+
 	if (min > max)
 		return (NULL);
 
 	range = (max - min) + 1;
 	arrays = (int *) malloc(sizeof(int) * range);
-	
+
 	if (arrays == NULL)
 		return (NULL);
 
 	m = 0;
-	
+
 	do {
 		arrays[m] = min + m;
 		m++;
@@ -33,6 +34,3 @@ int *array_range(int min, int max)
 
 	return (arrays);
 }
-		
-	
-	
