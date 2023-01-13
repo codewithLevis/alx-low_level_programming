@@ -18,13 +18,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *str;
 
 	if (!s1 || !s2)
-		return NULL;
+		return (NULL);
 	if (n >= (unsigned int)str_len(s2))
 		n = str_len(s2);
 
-	str = (char*)malloc(str_len(s1) + n + 1);
+	str = (char *)malloc(str_len(s1) + n + 1);
 	if (!str)
-		return NULL;
+		return (NULL);
 
 	cpy_str(str, s1);
 	strn_concat(str, s2, n);
@@ -50,7 +50,7 @@ char *strn_concat(char *str1, char *str2, int m)
 		str1[n + o] = str2[o];
 	str1[n + o] = '\0';
 
-	return(str1);
+	return (str1);
 }
 
 /**
@@ -67,14 +67,14 @@ char *cpy_str(char *s1, char *s2)
 	m = str_len(s2);
 	n = 0;
 
-	do{
+	do {
 		s1[n] = s2[n];
 		n++;
 	} while (n < m);
 
 	s1[n] = '\0';
 
-	return(s1);
+	return (s1);
 }
 /**
 *str_len - finds string's length
@@ -84,6 +84,7 @@ char *cpy_str(char *s1, char *s2)
 int str_len(char *str)
 {
 	int i;
+
 	for (i = 0; str[i] != '\0';)
 		i++;
 	return (i);
