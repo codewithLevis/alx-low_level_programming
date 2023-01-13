@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int conf_digit(int c);
 int conf_number(char *num);
@@ -22,13 +23,13 @@ int main(int argc, char *argv[])
 		exit (98);
 	}
 
-	if (!conf_number(argc[1]) || !conf_number(argc[2]))
+	if (!conf_number(argv[1]) || !conf_number(argv[2]))
 	{
 		printf("Error\n");
 		exit(98);
 	}
 
-	product = mul(argc[1], argc[2]);
+	product = mul(argv[1], argv[2]);
 	printf("%d\n", product);
     	return (0);
 }
@@ -57,12 +58,12 @@ int conf_digit(int c)
 *return 0 or 1;
 */
 
-int conf_number(const char *num)
+int conf_number(char *num)
 {
 	int iter = 0;
 	
 	do {
-		if (!conf_digit(num[i]))
+		if (!conf_digit(num[iter]))
 			return (0);
 		iter++;
 	} while (num[iter]);
