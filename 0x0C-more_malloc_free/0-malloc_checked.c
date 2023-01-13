@@ -8,8 +8,8 @@
 
 void *malloc_checked(unsigned int b)
 {
-	int *size;
-	size = (int)malloc(b);
+	unsigned int *size;
+	size = (unsigned int)malloc(b);
 	if (size == NULL)
 		exit(98);
 	
