@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 int conf_digit(int c);
 int conf_number(char *num);
@@ -83,7 +82,7 @@ int conf_number(char *num)
 
 int conv_to_int(char *s)
 {
-	int all = strlen(s);
+	int all = stringlen(s);
 	int value;
 	int a = 0;
 	int b = 0;
@@ -121,17 +120,15 @@ int conv_to_int(char *s)
  * Return: length
  *
  */
-/*int stringlen(char *s)
+int stringlen(char *s)
 {
 	int len;
 
-	len = 0;
-	
-	while (*s != '\0')
-		s++;
+	for (len = 0; s[len] != '\0';)
+		len++;
 
 	return (len);
-}*/
+}
 
 /**
 *mul -  multiplies two positive numbers
