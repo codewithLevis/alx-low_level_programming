@@ -12,13 +12,15 @@ char *_memset(char *s, char b, unsigned int n);
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *str;
+
 	if (nmemb == 0 || size == 0)
-		return NULL;
-	
+		return (NULL);
+
 	str = malloc(nmemb * size);
-	if (!str) return NULL;
+	if (!str)
+		return (NULL);
 	_memset(str, 0, nmemb * size);
-	
+
 	return (str);
 }
 
