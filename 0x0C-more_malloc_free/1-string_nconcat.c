@@ -47,7 +47,7 @@ char *strn_concat(char *str1, char *str2, int m)
 	n = str_len(str1);
 
 	for (o = 0; o < m && str2[o] != '\0'; o++)
-		str1[n + o] = str1[o];
+		str1[n + o] = str2[o];
 	str1[n + o] = '\0';
 
 	return(str1);
