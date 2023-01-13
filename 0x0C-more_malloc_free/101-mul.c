@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int conf_digit(int c);
-int conf_number(const char *num)'
+int conf_number(char *num);
 int conv_to_int(char *s);
 int mul(char *num1, char *num2);
 
