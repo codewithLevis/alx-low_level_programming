@@ -19,7 +19,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (!s1 || !s2)
 		return NULL;
-	if (n >= str_len(s2))
+	if (n >= (unsigned int)str_len(s2))
 		n = str_len(s2);
 
 	str = (char*)malloc(str_len(s1) + n + 1);
