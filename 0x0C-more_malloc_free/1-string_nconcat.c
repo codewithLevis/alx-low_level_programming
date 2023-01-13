@@ -9,7 +9,7 @@ char *cpy_str(char *s1, char *s2);
 *string_nconcat -  function that concatenates two strings
 *@s1: pointer to first string
 *@s2: pointer to second string
-*n: length
+*@n: length
 *Return: null or string
 */
 
