@@ -15,22 +15,22 @@ int *array_range(int min, int max)
 	int *arrays;
 	int range, m;
 	
-	if (min >max)
+	if (min > max)
 		return (NULL);
-	
-	range = max - (min + 1);
+
+	range = (max - min) + 1;
 	arrays = (int *) malloc(sizeof(int) * range);
 	
 	if (arrays == NULL)
 		return (NULL);
-	
+
 	m = 0;
 	
 	do {
 		arrays[m] = min + m;
 		m++;
 	} while (m < range);
-	
+
 	return (arrays);
 }
 		
