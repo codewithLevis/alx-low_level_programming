@@ -21,6 +21,7 @@ int _mul(const char *n1, const char *n2) {
 }
 
 int main(int argc, char *argv[]) {
+    int result;
     if (argc != 3) {
         printf("Error\n");
         return 98;
@@ -31,7 +32,7 @@ int main(int argc, char *argv[]) {
         return 98;
     }
 
-    int result = _mul(argv[1], argv[2]);
+    result = _mul(argv[1], argv[2]);
     printf("%d\n", result);
     return 0;
 }
