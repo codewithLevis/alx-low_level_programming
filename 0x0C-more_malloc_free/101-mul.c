@@ -32,6 +32,8 @@ int main(int argc, char *argv[])
 
 	product = mul(argv[1], argv[2]);
 	printf("%d\n", product);
+	free(product);
+	
     	return (0);
 }
 
