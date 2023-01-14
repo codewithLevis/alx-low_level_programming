@@ -22,14 +22,12 @@ if (new_size == 0 && ptr)
 free(ptr);
 return (NULL);
 }
-
 if (!ptr)
 return (malloc(new_size));
 
 str1 = malloc(new_size);
 if (!str1)
 return (NULL);
-
 str2 = ptr;
 
 if (new_size < old_size)
@@ -40,7 +38,6 @@ str1[n] = str2[n];
 n++;
 } while (n < new_size);
 }
-
 if (new_size > old_size)
 {
 n = 0;
@@ -49,7 +46,6 @@ str1[n] = str2[n];
 n++;
 } while (n < old_size);
 }
-
 free(ptr);
 return (str1);
 }
