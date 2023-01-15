@@ -22,14 +22,14 @@ return (i);
 */
 int _atoi(char *s)
 {
-int counter1, counter2, , len;
+int counter1, counter2, Flag, len;
 int number, digit;
 Flag = 0;
 counter2 = digit = number = 0;
 counter1 = 0;
 len = stringlen(s);
 
-do{
+do {
 if (s[counter2] == '-')
 ++counter1;
 if (s[counter2] >= '0' && s[counter2] <= '9')
