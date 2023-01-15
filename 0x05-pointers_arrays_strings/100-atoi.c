@@ -18,7 +18,7 @@ for (len = 0; s[len] != '\0'; len++);
 
 do{
 if (s[counter2] == '-')
-counter1++;
+++counter1;
 if (s[counter2] >= '0' && s[counter2] <= '9')
 {
 digit = s[counter2] - '0';
