@@ -1,7 +1,7 @@
 #include "main.h"
 /**
 *cap_string -  capitalizes all words of a string.
-*@value: parameter for passing string
+*@arr: parameter for passing string
 *Return: capitalized string
 */
 char *cap_string(char *arr)
@@ -17,7 +17,7 @@ i++;
 if (arr[i - 1] == ' ' ||
 arr[i - 1] == ',' ||
 arr[i - 1] == ';' ||
-arr[i -1 ] == '.' ||
+arr[i - 1] == '.' ||
 arr[i - 1] == '!' ||
 arr[i - 1] == '?' ||
 arr[i - 1] == '(' ||
