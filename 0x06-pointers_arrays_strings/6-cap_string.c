@@ -2,24 +2,34 @@
 /**
 *cap_string -  capitalizes all words of a string.
 *@value: parameter for passing string
-*Return: value
+*Return: capitalized string
 */
-char *cap_string(char *value)
+char *cap_string(char *arr)
 {
 int i = 0;
-for (; value[i] != '\0'; i++)
+
+for (; arr[i] != '\0'; i++)
 {
 
-if (value[i] == ' ' || value[i] == '\t' || value[i] == '\n'
-|| value[i] == ',' || value[i] == ';' || value[i] == '.'
-|| value[i] == '.' || value[i] == '!' || value[i] == '?'
-|| value[i] == '"' || value[i] == '(' || value[i] == ')'
-|| value[i] == '{' || value[i] == '}')
-{
-if (value[i + 1] >= 'a' && value[i + 1] <= 'z')
-value[i + 1] -= 32;
-}
+
+while (!(arr[i] >= 'a' && arr[i] <= 'z'))
+i++;
+if (arr[i - 1] == ' ' ||
+arr[i - 1] == ',' ||
+arr[i - 1] == ';' ||
+arr[i -1 ] == '.' ||
+arr[i - 1] == '!' ||
+arr[i - 1] == '?' ||
+arr[i - 1] == '(' ||
+arr[i - 1] == ')' ||
+arr[i - 1] == '"' ||
+arr[i - 1] == '{' ||
+arr[i - 1] == '}' ||
+arr[i - 1] == '\n' ||
+arr[i - 1] == '\t')
+arr[i] -= 32;
 
 }
-return (value);
+
+return (arr);
 }
