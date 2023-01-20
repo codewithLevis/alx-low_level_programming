@@ -8,9 +8,11 @@ char *cap_string(char *arr)
 {
 int i = 0;
 
-while (arr[++i])
+for (; arr[i] != '\0'; i++)
 {
 
+if (arr[0] >= 97 && arr[0] <= 122)
+arr[0] -= 32;
 
 while (!(arr[i] >= 'a' && arr[i] <= 'z'))
 i++;
