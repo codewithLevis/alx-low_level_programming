@@ -10,7 +10,7 @@
 
 int sum_them_all(const unsigned int n, ...)
 {
-	int m;
+	unsigned int m;
 	int total = 0;
 
 	va_list value;
