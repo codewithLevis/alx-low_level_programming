@@ -34,13 +34,13 @@ int main(int argc, char *argv[])
 
 	while (m < byte)
 	{
-		printf("%02hhx ", ptr[m]);
-
 		if (m == byte - 1)
 		{
 			printf("%02hhx\n", ptr[m]);
 			break;
 		}
+
+		printf("%02hhx ", ptr[m]);
 	}
 	return (0);
 }
