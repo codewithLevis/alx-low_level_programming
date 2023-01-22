@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "dog.h"
 
-int *lenstri(char *s);
+int lenstri(char *s);
 char *copy(char *str1, char *str2);
 
 /**
