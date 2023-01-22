@@ -68,7 +68,7 @@ return (str1);
 *Return: len of string
 */
 
-int *lenstri(char *s)
+int lenstri(char *s)
 {
 int m = 0;
 while (s[m] != '\0')
