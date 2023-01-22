@@ -41,6 +41,7 @@ int main(int argc, char *argv[])
 		}
 
 		printf("%02hhx ", ptr[m]);
+		m++;
 	}
 	return (0);
 }
