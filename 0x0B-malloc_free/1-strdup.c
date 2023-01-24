@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
 *_strdup - returns a pointer to a newly string
 *which is a duplicate of the string str
