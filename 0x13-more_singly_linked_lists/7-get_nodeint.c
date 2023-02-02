@@ -8,13 +8,13 @@
 
 size_t listint_len(const listint_t *h)
 {
-	size_t m = 0;
-	const listint_t *ptr = h;
+size_t m = 0;
+const listint_t *ptr = h;
 
-	for (; ptr != NULL; m++)
-		ptr = ptr->next;
+for (; ptr != NULL; m++)
+ptr = ptr->next;
 
-	return (m);
+return (m);
 }
 
 /**
@@ -28,24 +28,24 @@ size_t listint_len(const listint_t *h)
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-        listint_t *ptr, *nth_node;
-        unsigned int m, len = listint_len(head);
+listint_t *ptr, *nth_node;
+unsigned int m, len = listint_len(head);
 
-        nth_node = (listint_t *) malloc(sizeof(listint_t));
+nth_node = (listint_t *) malloc(sizeof(listint_t));
 
-        if (nth_node == NULL)
-                return (NULL);
+if (nth_node == NULL)
+return (NULL);
 
-        if (index > len)
-                return (NULL);
+if (index > len)
+return (NULL);
 
-        ptr = head;
+ptr = head;
 
-        for (m = 0; ptr != NULL && m < index - 1; m++)
-        {
-                        ptr = ptr->next;
-	}
-        nth_node = ptr->next;
+for (m = 0; ptr != NULL && m < index - 1; m++)
+{
+ptr = ptr->next;
+}
+nth_node = ptr->next;
 
-        return (nth_node);
+return (nth_node);
 }
