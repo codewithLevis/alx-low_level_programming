@@ -16,7 +16,7 @@ size_t free_listint_safe(listint_t **h)
 	listint_t *search;
 
 	if (h == NULL || *h == NULL)
-		return (NULL);
+		return (0);
 
 	while (*h)
 	{
