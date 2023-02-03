@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 
 /**
 *print_listint_safe - function that prints a listint_t linked list
@@ -15,14 +15,14 @@ size_t print_listint_safe(const listint_t *head)
 	size_t counter = 0, check;
 
 	search = head;
-	for (;search; counter++)
+	for (; search; counter++)
 	{
 		printf("[%p] %d\n", (void *)search, search->n);
 
 		search = search->next;
 		move = head;
 
-		for  (check = 0 ;check < counter; check++)
+		for  (check = 0 ; check < counter; check++)
 		{
 			if (search == move)
 			{
