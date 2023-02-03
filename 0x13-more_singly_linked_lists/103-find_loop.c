@@ -13,7 +13,7 @@ listint_t *find_listint_loop(listint_t *head)
 		return (NULL);
 
 	locate = head->next;
-	hare = (head->next)->next;
+	search = (head->next)->next;
 
 	for (; search != NULL; search = (search->next)->next;)
 	{
