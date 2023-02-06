@@ -12,7 +12,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned int value;
 
-	if (index > 64)
+	if (index > sizeof(unsigned long int) * 8)
 		return (-1);
 
 	value = 1UL << index;
