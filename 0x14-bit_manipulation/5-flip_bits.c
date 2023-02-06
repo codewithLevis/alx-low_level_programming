@@ -3,7 +3,7 @@
 /**
 *flip_bits - function that lips bits
 *@n: integer one
-*@b: integer two
+*@m: integer two
 *Return: the number of bits you would need to flip
 */
 
