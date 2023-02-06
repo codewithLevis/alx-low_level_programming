@@ -2,7 +2,7 @@
 
 /**
 *print_binary - prints the binary representation of a number
-*n: is the input integer
+*@n: is the input integer
 *Return: void
 */
 
