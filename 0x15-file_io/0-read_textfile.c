@@ -19,7 +19,7 @@ return (0);
 info = malloc(letters);
 
 if (info == NULL)
-return 0;
+return (0);
 
 fp = open(filename, O_RDONLY);
 
