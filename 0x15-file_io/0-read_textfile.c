@@ -24,18 +24,24 @@ ssize_t read_textfile(const char *filename, size_t letters)
         fp = open(filename, O_RDONLY);
 
 	if (fp == -1)
-		return (0);
-
-	while ((counter = read(fp, info, letters)) > 0)
 	{
-		check = write(1, info, counter);
-		if (check == -1 || check != counter)
-			return (0);
+		free(info);
+		return (0);
 	}
 
-	close(fp);
-	free(info);
+	counter = read(fp, info, letters);
+	check = write(1, info, counter);
 
-	return (0);
+	if (counter == -1 || check == -1 || check != counter)
+	{
+		free(info);
+		return (0);
+	}
+
+	free(info);
+	close(fp);
+	
+
+	return (check);
 
 }
