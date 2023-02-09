@@ -26,7 +26,7 @@ int _strlen(char *s)
 *if the file already exists, truncate it
 */
 
-int create_file(const char *filename, char *text_content);
+int create_file(const char *filename, char *text_content)
 {
 	int fp;
 	int check, len;
