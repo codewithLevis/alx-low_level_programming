@@ -48,7 +48,9 @@ int create_file(const char *filename, char *text_content)
 
 	if (check == -1)
 		return (-1);
+	
+	close(fp);
 
-	return (0);
+	return (1);
 }
 	
