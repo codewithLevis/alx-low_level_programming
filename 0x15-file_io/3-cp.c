@@ -27,20 +27,20 @@ int main(int argc, char *argv[])
 	to_file = open(argv[2], O_TRUNC | O_CREAT | O_WRONLY, 0664);
 	while ((no_read = read(from_file, buffer, 1024)) > 0)
 	{
-		if (to_file < 0 || (write(_file2, buffer, no_read) != no_read))
+		if (to_file < 0 || (write(to_file, buffer, no_read) != no_read))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 	}
-	if (_read < 0)
+	if (no_read < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	_close (from_file);
+	_close(from_file);
 	_close(to_file);
-	
+
 	return (0);
 }
 
