@@ -38,12 +38,13 @@ void rev_string(char *str)
 int _strlen(const char *s)
 {
 	int length = 0;
+
 	while (*s != '\0')
 	{
 		length++;
 		s++;
 	}
-	return length;
+	return (length);
 }
 
 
@@ -53,7 +54,7 @@ int _strlen(const char *s)
 *@n2: second no
 *@r: buffer that the function will use to store the result
 *@size_r: is the buffer size
-*@Return: a pointer to the result
+*Return: a pointer to the result
 *n1 and n2 will never be empty
 *If the result can not be stored in r the function must return 0
 */
