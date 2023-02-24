@@ -8,7 +8,7 @@
 */
 void print_buffer(char *b, int size)
 {
-	int offset, byte_count, i;
+	int offset, byte, byte_count, i;
 	offset = 0;
 
 	if (size <= 0)
@@ -32,7 +32,7 @@ void print_buffer(char *b, int size)
 		}
 		for (i = 0; i < byte_count; i++)
 		{
-		int byte = *(b + offset + i);
+		byte = *(b + offset + i);
 
 		if (byte < 32 || byte > 132)
 			byte = '.';
