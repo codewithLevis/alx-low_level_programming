@@ -1,8 +1,8 @@
-#include "shell.h"
+#include "main.h"
 
 /**
 *rev_string -takes a string as input and reverses the order
-*@str - string
+*@str: string
 *Return: void
 */
 
@@ -31,6 +31,23 @@ void rev_string(char *str)
 }
 
 /**
+*_strlen - gets length
+*@s: string
+*Return: length
+*/
+int _strlen(const char *s)
+{
+	int length = 0;
+	while (*s != '\0')
+	{
+		length++;
+		s++;
+	}
+	return length;
+}
+
+
+/**
 *infinite_add - adds two numbers
 *@n1:first no
 *@n2: second no
@@ -46,12 +63,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int carry = 0, i = 0, j = 0, digit_count = 0;
 	int val1 = 0, val2 = 0, temp_sum = 0;
 
-	while (*(n1 + i) != '\0')
-		i++;
-	while (*(n2 + j) != '\0')
-		j++;
-	i--;
-	j--;
+	i = (_strlen(n1) - 1);
+	j = (_strlen(n2) - 1);
 
 	if (j >= size_r || i >= size_r)
 		return (0);
@@ -69,7 +82,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			val2 = *(n2 + j) - '0';
 
 		temp_sum = val1 + val2 + carry;
-
 		if (temp_sum >= 10)
 			carry = 1;
 		else
@@ -80,13 +92,11 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 		*(r + digit_count) = (temp_sum % 10) + '0';
 		digit_count++;
-		j--;
-		i--;
+		j--, i--;
 	}
 
 	if (digit_count == size_r)
 		return (0);
-
 	*(r + digit_count) = '\0';
 	rev_string(r);
 	return (r);
