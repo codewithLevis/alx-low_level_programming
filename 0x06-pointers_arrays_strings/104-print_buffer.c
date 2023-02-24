@@ -9,6 +9,7 @@
 void print_buffer(char *b, int size)
 {
 	int offset, byte, byte_count, i;
+
 	offset = 0;
 
 	if (size <= 0)
