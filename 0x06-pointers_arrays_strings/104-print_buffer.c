@@ -45,12 +45,13 @@ for (i = 0; i < size; i++)
                 printf("%c", b[j]);
             }
             else
+
             {
                 putchar('.');
             }
             j++;
         }
-        puts("");
+        printf("\n");
     }
 }
 }
