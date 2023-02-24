@@ -1,18 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-/**
-*my_isprint - checks character between 32 and 126 in a string
-*Return: 1 or 0
-*/
-
-int my_isprint(int c)
-{
-if (c >= 32 && c <= 126)
-{
-return 1;
-}
-return 0;
-}
 
 /**
 *print_buffer - prints a buffer
@@ -22,35 +8,38 @@ return 0;
 */
 void print_buffer(char *b, int size)
 {
-int i, j;
-if (size <= 0)
-printf("\n");
+	int offset, byte_count, i;
+	offset = 0;
 
-for (i = 0; i < size; i++)
-{
-    if (i % 10 == 0)
-    {
-        printf("%08x: ", i);
-    }
+	if (size <= 0)
+	{
+		printf("\n");
+		return;
+	}
+	for (offset = 0; offset < size; offset += 10)
+	{
+		byte_count = (size - offset) < 10 ? (size - offset) : 10;
+		printf("%08x: ", offset);
+		for (i = 0; i < 10; i++)
+		{
+			if (i < byte_count)
+				printf("%02x", *(b + offset + i));
+			else
+				printf("  ");
 
-    printf("%02x ", b[i]);
+			if (i % 2)
+			printf(" ");
+		}
 
-    if ((i + 1) % 10 == 0)
-    {
-        j = i - 9;
-        while (j <= i)
-        {
-            if (my_isprint(b[j]))
-            {
-                printf("%c", b[j]);
-            }
-            else
-            {
-                putchar('.');
-            }
-            j++;
-        }
-        puts("");
-    }
-}
+		for (i = 0; i < byte_count; i++)
+		{
+		int byte = *(b + offset + i);
+
+		if (byte < 32 || byte > 132)
+			byte = '.';
+
+		printf("%c", byte);
+		}
+		printf("\n");
+	}
 }
