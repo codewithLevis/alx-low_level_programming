@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
-* looped_listint_len - determines how many distinct nodes 
+* looped_listint_len - determines how many distinct nodes
 * there are in a looped listint_t linked list.
 * @head: listint_t pointer
 * Return: If not, the number of distinct nodes in the list
