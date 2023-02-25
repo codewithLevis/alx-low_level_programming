@@ -39,8 +39,8 @@ close(fp);
 return (0);
 }
 
-free(info);
 close(fp);
+free(info);
 
 return (check);
 }
