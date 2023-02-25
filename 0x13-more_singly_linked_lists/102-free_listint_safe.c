@@ -16,21 +16,21 @@ size_t free_listint_safe(listint_t **h)
 
 	if (!h || !*h)
 	{
-		return 0;
+		return (0);
 	}
 
-	while (*head_ptr)
+	while (*h)
 	{
-		diff = *h - (*hr)->next;
+		diff = *h - (*h)->next;
 		if (diff > 0)
 		{
 			temp_node = (*h)->next;
-			*hr = temp_node;
+			*h = temp_node;
 			count++;
 		}
 		else
 		{
-			*hr = NULL;
+			*h = NULL;
 			count++;
 			break;
 		}
