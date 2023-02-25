@@ -11,36 +11,43 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 int fp;
 ssize_t counter, check;
-char *info;
+char *info = NULL;
 
 if (filename == NULL)
 return (0);
 
-info = malloc(sizeof(char *) * letters);
+fp = open(filename, O_RDONLY);
+
+if (fp < 0)
+return (0);
+
+info = malloc(sizeof(char *) * (letters + 1));
 
 if (info == NULL)
 return (0);
 
-fp = open(filename, O_RDONLY);
+counter = read(fp, info, letters);
 
-if (fp == -1)
-{
-free(info);
-return (0);
+ if (counter < 0)
+ {
+        free(info);
+        close(fp);
+        return (0);
 }
 
-counter = read(fp, info, letters);
+info[counter] = '\0';
+
 check = write(1, info, counter);
 
-if (counter == -1 || check == -1 || check != counter)
+if (check == -1 || check != counter)
 {
 free(info);
 close(fp);
 return (0);
 }
 
-close(fp);
 free(info);
+close(fp);
 
 return (check);
 }
