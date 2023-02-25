@@ -16,7 +16,7 @@ char *info;
 if (filename == NULL)
 return (0);
 
-info = malloc(letters);
+info = malloc(sizeof(char *) * letters);
 
 if (info == NULL)
 return (0);
