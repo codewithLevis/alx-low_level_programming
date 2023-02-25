@@ -35,6 +35,7 @@ check = write(1, info, counter);
 if (counter == -1 || check == -1 || check != counter)
 {
 free(info);
+close(fp);
 return (0);
 }
 
