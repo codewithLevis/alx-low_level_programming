@@ -11,31 +11,25 @@
 
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *search = NULL, *move = NULL;
-	size_t counter = 0, check;
+	size_t count = 0;
+	long int difference;
 
-	search = head;
-	for (; search; counter++)
-	{
-		printf("[%p] %d\n", (void *)search, search->n);
+	do {
+		difference = head - head->next;
+		count++;
+		printf("[%p] %d\n", (void *)head, head->n);
 
-		search = search->next;
-		move = head;
-
-		for  (check = 0 ; check < counter; check++)
+		if (difference > 0)
 		{
-			if (search == move)
-			{
-				printf("-> [%p] %d\n", (void *)search, search->n);
-				return (counter);
-			}
-
-			move = move->next;
+			head = head->next;
 		}
+		else
+		{
+			printf("-> [%p] %d\n", (void *)head->next, head->next->n);
+			break;
+		}
+	} while (head != NULL);
 
-		if (head == NULL)
-			exit(98);
-	}
-	return (counter);
+	return (count);
 }
 
