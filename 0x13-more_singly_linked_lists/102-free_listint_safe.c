@@ -10,31 +10,34 @@
 
 size_t free_listint_safe(listint_t **h)
 {
-	size_t count = 0;
+	size_t counter = 0;
 	int diff;
-	listint_t *temp_node;
 
-	if (!h || !*h)
-	{
+	listint_t *search;
+
+	if (h == NULL || *h == NULL)
 		return (0);
-	}
 
 	while (*h)
 	{
 		diff = *h - (*h)->next;
+
 		if (diff > 0)
 		{
-			temp_node = (*h)->next;
-			*h = temp_node;
-			count++;
+			search = (*h)->next;
+			free(*h);
+			*h = search;
+			counter++;
 		}
 		else
 		{
+			free(*h);
 			*h = NULL;
-			count++;
+			counter++;
 			break;
 		}
 	}
+	*h = NULL;
 
-	return (count);
+	return (counter);
 }
