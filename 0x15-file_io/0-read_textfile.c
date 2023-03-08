@@ -18,36 +18,29 @@ return (0);
 
 fp = open(filename, O_RDONLY);
 
-if (fp < 0)
+if (fp == -1)
 return (0);
 
-info = malloc(sizeof(char *) * (letters + 1));
+info = malloc(sizeof(char) * letters);
 
 if (info == NULL)
+{
+close(fp);
 return (0);
+}
 
 counter = read(fp, info, letters);
-
- if (counter < 0)
- {
-        free(info);
-        close(fp);
-        return (0);
-}
-
-info[counter] = '\0';
-
-check = write(1, info, counter);
-
-if (check != counter)
+close(fp);
+if (counter == -1)
 {
 free(info);
-close(fp);
 return (0);
 }
-
+check = write(1, info, counter);
 free(info);
-close(fp);
+
+if (check != counter)
+return (0);
 
 return (check);
 }
