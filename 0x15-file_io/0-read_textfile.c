@@ -39,7 +39,7 @@ info[counter] = '\0';
 
 check = write(1, info, counter);
 
-if (check == -1 || check != counter)
+if (check != counter)
 {
 free(info);
 close(fp);
