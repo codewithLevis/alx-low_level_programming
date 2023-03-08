@@ -36,7 +36,7 @@ if (counter == -1)
 free(info);
 return (0);
 }
-check = write(1, info, counter);
+check = write(STDOUT_FILENO, info, counter);
 free(info);
 
 if (check != counter)
