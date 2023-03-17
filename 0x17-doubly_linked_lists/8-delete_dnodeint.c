@@ -8,7 +8,7 @@
 *Return: 1 if it succeeded, -1 if it faile
 */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
- {
+{
 	dlistint_t *temp = *head, *temp2;
 
 	if ((*head) == NULL)
@@ -45,4 +45,4 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		temp = NULL;
 	}
 	return (1);
- }
+}
