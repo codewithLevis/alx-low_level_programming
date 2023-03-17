@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index - Inserts a new node 
+ * insert_dnodeint_at_index - Inserts a new node
  * atlist at a given position.
  * @h: A pointer to the head
  * @idx: The position
