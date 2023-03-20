@@ -3,41 +3,53 @@
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index - Inserts a new node
- * atlist at a given position.
- * @h: A pointer to the head
- * @idx: The position
- * @n: element
- * Return: If the function fails - NULL.
- * or the address of the new node.
- */
+* insert_dnodeint_at_index - Inserts a new node
+* atlist at a given position.
+* @h: A pointer to the head
+* @idx: The position
+* @n: element
+* Return: If the function fails - NULL.
+* or the address of the new node.
+*/
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *trav = *h, *new;
+	dlistint_t *new_node, *temp = *h;
+	unsigned int i = 0;
+
+	if (h == NULL)
+		return (NULL);
+	new_node = malloc(sizeof(dlistint_t));
+
+	if (new_node == NULL)
+		return (NULL);
+	new_node->n = n;
 
 	if (idx == 0)
 		return (add_dnodeint(h, n));
 
-	while (idx != 1)
+	while (i < idx - 1)
 	{
-		trav = trav->next;
-		if (trav == NULL)
+		if (temp == NULL)
+		{
+			free(new_node);
 			return (NULL);
-		 idx--;
+		}
+		temp = temp->next;
+		i++;
 	}
 
-	if (trav->next == NULL)
-		return (add_dnodeint_end(h, n));
-
-	new = malloc(sizeof(dlistint_t));
-	if (new == NULL)
+	if (temp == NULL)
+	{
+		free(new_node);
 		return (NULL);
+	}
+	new_node->prev = temp;
+	new_node->next = temp->next;
 
-	new->n = n;
-	new->prev = trav;
-	new->next = trav->next;
-	trav->next->prev = new;
-	trav->next = new;
+	if (temp->next != NULL)
+		temp->next->prev = new_node;
 
-	return (new);
+	temp->next = new_node;
+
+	return (new_node);
 }
