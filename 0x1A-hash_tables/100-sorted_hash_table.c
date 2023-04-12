@@ -38,7 +38,7 @@ shash_table_t *shash_table_create(unsigned long int size)
  * @value: value of key
  * Return: shash_node_t
 */
-shash_node_t *new_node_t(const char *key, char *value)
+shash_node_t *new_node_t(const char *key, const char *value)
 {
 	shash_node_t *new_node = malloc(sizeof(shash_node_t));
 
@@ -62,7 +62,7 @@ shash_node_t *new_node_t(const char *key, char *value)
  * set_ord_list - orders the list
  * @ht: hash table
  * @key: index gene-key
- * @node_t: node
+ * @new_node: node
 */
 
 void set_ord_list(shash_table_t *ht, shash_node_t *new_node, const char *key)
@@ -76,7 +76,7 @@ void set_ord_list(shash_table_t *ht, shash_node_t *new_node, const char *key)
 	}
 	else if (strcmp(key, ht->shead->key) < 0)
 	{
-		node_t->snext = ht->shead;
+		new_node->snext = ht->shead;
 		ht->shead->sprev = new_node;
 		ht->shead = new_node;
 	}
