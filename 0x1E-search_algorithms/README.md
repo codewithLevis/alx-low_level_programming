@@ -29,4 +29,7 @@ You will be asked to write files containing big O notations. Please use this for
 
 2. [Binary search algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 ![img](https://simplesnippets.tech/wp-content/uploads/2019/06/binary-search-algorithm-in-data-structures-1280x720.jpg)
+
+3. [Jump search algorithm](https://en.wikipedia.org/wiki/Jump_search)
+4. [Exponential search algorithm](https://en.wikipedia.org/wiki/Exponential_search)
  
