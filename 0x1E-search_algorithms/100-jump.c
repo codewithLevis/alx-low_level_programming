@@ -28,7 +28,7 @@ int jump_search(int *array, size_t size, int value)
 
 		if (right >= size)
 		{
-			right = size - 1;
+			/*right = size - 1;*/
 			break;
 		}
 	}
